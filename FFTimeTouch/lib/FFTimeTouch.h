@@ -2,22 +2,14 @@
 //  FFTimeTouch.h
 //  FFTimeTouch
 //
-//  Created by fans on 2020/6/16.
+//  Created by fans on 2020/6/17.
 //  Copyright © 2020 com.glority. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef FFTimeTouch_h
+#define FFTimeTouch_h
 
-NS_ASSUME_NONNULL_BEGIN
+#import "FFEventQueue.h"
+#import "FFEvent.h"
 
-typedef void(^FFTimeTouchBlock)(void);
-@interface FFTimeTouch : NSObject
-
-@property (nonatomic, assign) NSTimeInterval executeTime;
-
-- (void)addTouchWithBlock:(FFTimeTouchBlock)block;
-- (void)addTouch
-
-@end
-
-NS_ASSUME_NONNULL_END
+#endif /* FFTimeTouch_h */

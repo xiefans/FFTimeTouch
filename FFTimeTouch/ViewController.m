@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "FFTimeTouch.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) FFEventQueue *queue;
 
 @end
 
@@ -16,7 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.queue = [FFEventQueue new];
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    FFEvent *ffEvet = [FFEvent touchWithConflictTime:3.f
+                                                block:^{
+                                                    NSLog(@"执行咯");
+                                                }
+                                                conflictBlock:^{
+                                                    NSLog(@"我被冲突咯");
+                                                }];
+
+    [self.queue addTouch:ffEvet];
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0C1313249A224000207D47 /* FFTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0C1312249A224000207D47 /* FFTimer.m */; };
 		CED31B362498D053006D726B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B352498D053006D726B /* AppDelegate.m */; };
 		CED31B392498D053006D726B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B382498D053006D726B /* SceneDelegate.m */; };
 		CED31B3C2498D053006D726B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B3B2498D053006D726B /* ViewController.m */; };
@@ -16,8 +17,8 @@
 		CED31B472498D054006D726B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B462498D054006D726B /* main.m */; };
 		CED31B512498D054006D726B /* FFTimeTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B502498D054006D726B /* FFTimeTouchTests.m */; };
 		CED31B5C2498D054006D726B /* FFTimeTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B5B2498D054006D726B /* FFTimeTouchUITests.m */; };
-		CED31B6B2498D1BA006D726B /* FFTimeTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B6A2498D1BA006D726B /* FFTimeTouch.m */; };
-		CED31B6F2498D234006D726B /* FFTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B6E2498D234006D726B /* FFTouch.m */; };
+		CED31B6B2498D1BA006D726B /* FFEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B6A2498D1BA006D726B /* FFEventQueue.m */; };
+		CED31B6F2498D234006D726B /* FFEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CED31B6E2498D234006D726B /* FFEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0C1311249A224000207D47 /* FFTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTimer.h; sourceTree = "<group>"; };
+		CE0C1312249A224000207D47 /* FFTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTimer.m; sourceTree = "<group>"; };
+		CE0C1314249A249D00207D47 /* FFTimeTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTimeTouch.h; sourceTree = "<group>"; };
 		CED31B312498D053006D726B /* FFTimeTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFTimeTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED31B342498D053006D726B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED31B352498D053006D726B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,10 +60,10 @@
 		CED31B572498D054006D726B /* FFTimeTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFTimeTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED31B5B2498D054006D726B /* FFTimeTouchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTimeTouchUITests.m; sourceTree = "<group>"; };
 		CED31B5D2498D054006D726B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CED31B692498D1BA006D726B /* FFTimeTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTimeTouch.h; sourceTree = "<group>"; };
-		CED31B6A2498D1BA006D726B /* FFTimeTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTimeTouch.m; sourceTree = "<group>"; };
-		CED31B6D2498D234006D726B /* FFTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTouch.h; sourceTree = "<group>"; };
-		CED31B6E2498D234006D726B /* FFTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTouch.m; sourceTree = "<group>"; };
+		CED31B692498D1BA006D726B /* FFEventQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFEventQueue.h; sourceTree = "<group>"; };
+		CED31B6A2498D1BA006D726B /* FFEventQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFEventQueue.m; sourceTree = "<group>"; };
+		CED31B6D2498D234006D726B /* FFEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFEvent.h; sourceTree = "<group>"; };
+		CED31B6E2498D234006D726B /* FFEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +151,13 @@
 		CED31B6C2498D223006D726B /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				CED31B692498D1BA006D726B /* FFTimeTouch.h */,
-				CED31B6A2498D1BA006D726B /* FFTimeTouch.m */,
-				CED31B6D2498D234006D726B /* FFTouch.h */,
-				CED31B6E2498D234006D726B /* FFTouch.m */,
+				CE0C1314249A249D00207D47 /* FFTimeTouch.h */,
+				CED31B692498D1BA006D726B /* FFEventQueue.h */,
+				CED31B6A2498D1BA006D726B /* FFEventQueue.m */,
+				CED31B6D2498D234006D726B /* FFEvent.h */,
+				CED31B6E2498D234006D726B /* FFEvent.m */,
+				CE0C1311249A224000207D47 /* FFTimer.h */,
+				CE0C1312249A224000207D47 /* FFTimer.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -285,12 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0C1313249A224000207D47 /* FFTimer.m in Sources */,
 				CED31B3C2498D053006D726B /* ViewController.m in Sources */,
 				CED31B362498D053006D726B /* AppDelegate.m in Sources */,
 				CED31B472498D054006D726B /* main.m in Sources */,
-				CED31B6B2498D1BA006D726B /* FFTimeTouch.m in Sources */,
+				CED31B6B2498D1BA006D726B /* FFEventQueue.m in Sources */,
 				CED31B392498D053006D726B /* SceneDelegate.m in Sources */,
-				CED31B6F2498D234006D726B /* FFTouch.m in Sources */,
+				CED31B6F2498D234006D726B /* FFEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
