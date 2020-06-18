@@ -24,7 +24,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    FFEvent *ffEvet = [FFEvent touchWithConflictTime:3.f
+    FFEvent *ffEvet = [FFEvent touchWithConflictTime:1.f
                                                 block:^{
                                                     NSLog(@"执行咯");
                                                 }
